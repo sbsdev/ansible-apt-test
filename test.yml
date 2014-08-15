@@ -1,0 +1,18 @@
+---
+- hosts: xmlp-test
+  sudo: yes
+  vars:
+    debs:
+      - sbs-braille-tables_1.7.9_all.deb
+      - tcolorbox_2.51-5_all.deb
+  
+  tasks:
+    
+    - name: copy debs
+      copy: src="files/{{ item }}" dest=/tmp
+      with_items: debs
+
+    - name: install debs
+      apt: deb="/tmp/{{ item }}"
+      with_items: debs
+      
