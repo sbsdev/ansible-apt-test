@@ -2,9 +2,9 @@
 
 Minimal ansible playbook to test apt with local debs
 
-Since Ansible 1.6. the apt module of ansible supports the direct
-installation of deb packages. This can be useful for packages that
-you build yourself and you do not want to maintain a local repository.
+Since Ansible 1.6. the apt module supports the direct installation of
+deb packages. This can be useful for packages that you build yourself
+and you do not want to maintain a local repository.
 
 ``` yaml
 # Install a .deb package
